@@ -1,4 +1,2 @@
-approvers:
-- frontend-leads
-reviewers:
-- frontend-writers
+approvers: -frontend - leads;
+reviewers: -frontend - writers;

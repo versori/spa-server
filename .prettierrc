@@ -4,7 +4,6 @@
   "endOfLine": "lf",
   "htmlWhitespaceSensitivity": "css",
   "insertPragma": false,
-  "jsxBracketSameLine": false,
   "jsxSingleQuote": false,
   "printWidth": 120,
   "proseWrap": "preserve",
@@ -12,22 +11,14 @@
   "requirePragma": false,
   "semi": true,
   "singleQuote": true,
-  "tabWidth": 4,
   "trailingComma": "es5",
   "useTabs": false,
   "vueIndentScriptAndStyle": false,
-  "parser": "typescript",
   "overrides": [
     {
-      "files": "*.mdx",
+      "files": ["OWNERS", "OWNERS_ALIASES"],
       "options": {
-        "parser": "mdx"
-      }
-    },
-    {
-      "files": "*.css",
-      "options": {
-        "parser": "css"
+        "parser": "yaml"
       }
     }
   ]

@@ -1,0 +1,11 @@
+/.idea
+/client
+/server
+
+.editorconfig
+.eslintignore
+LICENSE
+.gitignore
+.npmrc
+.nvmrc
+.prettierignore

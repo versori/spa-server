@@ -5,10 +5,10 @@ built with Webpack.
 
 This is an incredibly lightweight library with minimal features, although this may grow over time.
 
-- Serves static assets from a directory
-- Injects configuration into the `index.html` body which can be consumed client-side. This is useful when you want
-  environment variables to be defined at runtime rather than build-time via Webpack.
-- Fallback all 404 requests to the index.html, supporting client-side routing solutions such as react-router.
+-   Serves static assets from a directory
+-   Injects configuration into the `index.html` body which can be consumed client-side. This is useful when you want
+    environment variables to be defined at runtime rather than build-time via Webpack.
+-   Fallback all 404 requests to the index.html, supporting client-side routing solutions such as react-router.
 
 ## Getting Started
 
@@ -69,12 +69,11 @@ workspace to compile the file, or use `ts-node` for execution.
 By default, the `config` object set via `loadConfig()` and retrieved using `getConfig()` is typed to an empty interface:
 
 ```ts
-export interface RuntimeConfig {
-}
+export interface RuntimeConfig {}
 ```
 
 Users should add a `.d.ts` file in your project containing a declaration of the `RuntimeConfig` interface which should
-be merged with the empty interface defined by this package; this technique is called 
+be merged with the empty interface defined by this package; this technique is called
 [declaration merging][declaration merging].
 
 ```ts
@@ -89,5 +88,4 @@ declare module '@versori/spa-server/client' {
 ```
 
 [fastify]: https://www.fastify.io
-
 [declaration merging]: https://www.typescriptlang.org/docs/handbook/declaration-merging.html

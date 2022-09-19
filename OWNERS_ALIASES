@@ -1,18 +1,18 @@
 aliases:
-  backend-leads:
-  - dan-j
-  - JLVersori
-  backend-writers:
-  - dan-j
-  - JLVersori
-  frontend-leads:
-  - dan-j
-  - JLVersori
-  frontend-writers:
-  - dan-j
-  - JLVersori
-  github-managers:
-  - dan-j
-  versori-admins:
-  - dan-j
-  - JLVersori
+    backend-leads:
+        - dan-j
+        - JLVersori
+    backend-writers:
+        - dan-j
+        - JLVersori
+    frontend-leads:
+        - dan-j
+        - JLVersori
+    frontend-writers:
+        - dan-j
+        - JLVersori
+    github-managers:
+        - dan-j
+    versori-admins:
+        - dan-j
+        - JLVersori

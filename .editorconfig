@@ -11,7 +11,7 @@ charset = utf-8
 indent_style = space
 indent_size = 4
 
-[{**.json,.prettierrc}]
+[{**.json,.prettierrc,**.yaml,**.yml}]
 indent_size = 2
 
 [{**.ts, **.tsx}]
@@ -20,6 +20,3 @@ ij_typescript_spaces_within_object_literal_braces = true
 ij_typescript_spaces_within_object_type_braces = true
 ij_typescript_import_sort_members = true
 ij_typescript_import_sort_module_name = true
-
-[**.tsx]
-ij_html_space_inside_empty_tag = true
