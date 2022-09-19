@@ -36,6 +36,7 @@
     "jsdom": "^19.0.0"
   },
   "devDependencies": {
+    "@types/debug": "^4.1.7",
     "@types/jsdom": "^16.2.14",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
