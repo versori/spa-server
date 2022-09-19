@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from "@jest/globals";
+import { beforeEach, describe, expect, it } from '@jest/globals';
 import { getConfig } from '../config';
 import { loadConfig } from '../load-config';
 
