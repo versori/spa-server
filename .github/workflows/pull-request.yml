@@ -15,7 +15,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Install Modules
+      - name: Install dependencies
         run: npm ci
+      - name: Lint & Formatting
+        run: npm run check
       - name: Build
         run: npm run build

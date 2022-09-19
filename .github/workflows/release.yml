@@ -22,11 +22,13 @@ jobs:
           service_account: ${{ env.WORKLOAD_IDENTITY_SERVICE_ACCOUNT }}
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v0
-      - name: Install modules
+      - name: Install dependencies
         run: npm ci
+      - name: Lint & Formatting
+        run: npm run check
       - name: Build
         run: npm run build
-      - name: Get Token
+      - name: GCP Artifact Registry Login
         run: |
           npx google-artifactregistry-auth
       - name: Semantic Release
@@ -37,5 +39,5 @@ jobs:
             @semantic-release/changelog@^6.0.1
             @semantic-release/git@^10.0.1
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.VERSORI_REPOS_PAT }}
           HUSKY: 0

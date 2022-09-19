@@ -9,9 +9,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf client server",
-    "lint": "eslint src --ext .tsx --ext .ts",
-    "lint:fix": "eslint src --ext .tsx --ext .ts --fix",
-    "fmt": "prettier --write '**/*'",
+    "fmt": "run-s fmt:lint fmt:prettier",
+    "fmt:prettier": "prettier --write '**/*'",
+    "fmt:lint": "eslint src --ext .tsx --ext .ts --fix",
+    "check": "run-p check:*",
+    "check:lint": "eslint src --ext .tsx --ext .ts",
+    "check:fmt": "prettier --check '**/*'",
     "build": "tsc"
   },
   "repository": {
@@ -44,6 +47,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.4"
