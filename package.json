@@ -9,12 +9,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf client server",
-    "fmt": "run-s fmt:lint fmt:prettier",
+    "fmt": "run-s fmt:eslint fmt:prettier",
+    "fmt:eslint": "eslint src --ext .tsx --ext .ts --fix",
     "fmt:prettier": "prettier --write '**/*'",
-    "fmt:lint": "eslint src --ext .tsx --ext .ts --fix",
     "check": "run-p check:*",
-    "check:lint": "eslint src --ext .tsx --ext .ts",
-    "check:fmt": "prettier --check '**/*'",
+    "check:eslint": "eslint src --ext .tsx --ext .ts",
+    "check:prettier": "prettier --check '**/*'",
     "build": "tsc"
   },
   "repository": {

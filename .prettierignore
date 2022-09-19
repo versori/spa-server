@@ -4,8 +4,11 @@
 
 .editorconfig
 .eslintignore
-LICENSE
 .gitignore
 .npmrc
 .nvmrc
 .prettierignore
+
+gha-creds-*.json
+LICENSE
+
