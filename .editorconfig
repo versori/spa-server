@@ -1,0 +1,25 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+indent_style = space
+indent_size = 4
+
+[{**.json,.prettierrc}]
+indent_size = 2
+
+[{**.ts, **.tsx}]
+max_line_length = 120
+ij_typescript_spaces_within_object_literal_braces = true
+ij_typescript_spaces_within_object_type_braces = true
+ij_typescript_import_sort_members = true
+ij_typescript_import_sort_module_name = true
+
+[**.tsx]
+ij_html_space_inside_empty_tag = true

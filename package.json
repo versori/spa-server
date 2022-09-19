@@ -1,0 +1,36 @@
+{
+  "name": "@versori/spa-server",
+  "version": "1.0.0-alpha.0",
+  "description": "A HTTP server for SPA applications",
+  "files": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf client server",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/versori/spa-server.git"
+  },
+  "keywords": ["spa", "http", "server"],
+  "author": "Versori Ltd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/versori/spa-server/issues"
+  },
+  "homepage": "https://github.com/versori/spa-server#readme",
+  "dependencies": {
+    "@fastify/static": "^5.0.1",
+    "debug": "^4.3.4",
+    "fastify": "^3.29.0",
+    "jsdom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^16.2.14",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  }
+}
