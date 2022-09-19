@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/versori/spa-server/compare/v1.0.0...v1.0.1) (2022-09-19)
+
+
+### Bug Fixes
+
+* properly merge runtime config with nested fields and add tests ([f6f3297](https://github.com/versori/spa-server/commit/f6f3297a4ae679d957aae0c360b6f07c31b10826))
+
 # 1.0.0 (2022-09-19)
 
 
