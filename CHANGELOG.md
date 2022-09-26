@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/versori/spa-server/compare/v1.0.1...v1.1.0) (2022-09-26)
+
+
+### Features
+
+* serve compressed static assets if they exist ([604750a](https://github.com/versori/spa-server/commit/604750ac8d9098604bac11ac49181beaec446892))
+
 ## [1.0.1](https://github.com/versori/spa-server/compare/v1.0.0...v1.0.1) (2022-09-19)
 
 
