@@ -48,6 +48,7 @@ export function serve(assetDir: string, config: RuntimeConfig = {}, opts?: Opts)
     app.register(fastifyStatic, {
         ...(opts?.static ?? {}),
         root: assetDir,
+        preCompressed: true,
     });
 
     app.listen(opts?.port ?? DEFAULT_PORT, opts?.address ?? DEFAULT_ADDRESS, (err) => {
