@@ -26,6 +26,8 @@ jobs:
         run: npm ci
       - name: Lint & Formatting
         run: npm run check
+      - name: Test
+        run: npm run test
       - name: Build
         run: npm run build
       - name: GCP Artifact Registry Login

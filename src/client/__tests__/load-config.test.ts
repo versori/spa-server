@@ -29,5 +29,26 @@ describe('load-config', () => {
                 },
             });
         });
+
+        it('undefined is overridden by default config', async () => {
+            window.__RUNTIME_CONFIG__ = {
+                foo: 'bar',
+                baz: {
+                    cat: undefined,
+                },
+            };
+            await loadConfig({
+                baz: {
+                    cat: 'dog',
+                },
+            });
+
+            expect(getConfig()).toEqual({
+                foo: 'bar',
+                baz: {
+                    cat: 'dog',
+                },
+            });
+        });
     });
 });
