@@ -14,14 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Setup Google Cloud Authentication
-        uses: google-github-actions/auth@v0
+        uses: google-github-actions/auth@v2
         with:
           workload_identity_provider: ${{ env.WORKLOAD_IDENTITY_PROVIDER }}
           service_account: ${{ env.WORKLOAD_IDENTITY_SERVICE_ACCOUNT }}
       - name: Set up Cloud SDK
-        uses: google-github-actions/setup-gcloud@v0
+        uses: google-github-actions/setup-gcloud@v2
       - name: Install dependencies
         run: npm ci
       - name: Lint & Formatting
@@ -34,7 +34,7 @@ jobs:
         run: |
           npx google-artifactregistry-auth
       - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v2
+        uses: cycjimmy/semantic-release-action@v3
         with:
           semantic_version: ^18.0.0
           extra_plugins: |
