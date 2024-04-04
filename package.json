@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/versori/spa-server#readme",
   "dependencies": {
+    "@fastify/helmet": "^11.1.1",
     "@fastify/static": "^6.5.0",
     "debug": "^4.3.4",
     "fastify": "^4.6.0",
