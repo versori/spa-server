@@ -33,6 +33,11 @@ jobs:
       - name: GCP Artifact Registry Login
         run: |
           npx google-artifactregistry-auth
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.VERSORI_RELEASER_APP_ID }}
+          private-key: ${{ secrets.VERSORI_RELEASER_PRIVATE_KEY }}
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v2
         with:
@@ -41,5 +46,5 @@ jobs:
             @semantic-release/changelog@^6.0.1
             @semantic-release/git@^10.0.1
         env:
-          GITHUB_TOKEN: ${{ secrets.VERSORI_REPOS_PAT }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           HUSKY: 0
