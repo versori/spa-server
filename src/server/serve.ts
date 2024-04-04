@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import fastifyStatic, { FastifyStaticOptions } from '@fastify/static';
+import helmet from '@fastify/helmet';
 import Fastify, { FastifyReply, FastifyRequest } from 'fastify';
 import { readFileSync } from 'fs';
 import * as path from 'path';
@@ -45,6 +46,7 @@ export function serve(assetDir: string, config: RuntimeConfig = {}, opts?: Opts)
 
     app.get('/', serveIndex);
     app.get('/index.html', serveIndex);
+    app.register(helmet, { global: true });
     app.register(fastifyStatic, {
         ...(opts?.static ?? {}),
         root: assetDir,
