@@ -50,8 +50,9 @@ export function serve(assetDir: string, config: RuntimeConfig = {}, opts?: Opts)
         global: true,
         strictTransportSecurity: {
             maxAge: 7776000,
-            includeSubDomains: true,
+            includeSubDomains: true, // defaults to true
         },
+        contentSecurityPolicy: true, // defaults to true
     });
     app.register(fastifyStatic, {
         ...(opts?.static ?? {}),
