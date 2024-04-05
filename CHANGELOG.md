@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/versori/spa-server/compare/v1.2.0...v1.3.0) (2024-04-05)
+
+
+### Features
+
+* add contentSecurityPolicy ([2b263e3](https://github.com/versori/spa-server/commit/2b263e3851394174519002b7f7c1921881bf3768))
+
 # [1.2.0](https://github.com/versori/spa-server/compare/v1.1.0...v1.2.0) (2024-04-05)
 
 
