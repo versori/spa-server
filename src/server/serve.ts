@@ -14,6 +14,7 @@ type Opts = {
     port?: number;
     address?: string;
     static?: Omit<FastifyStaticOptions, 'root'>;
+    helmet?: object | undefined;
 };
 
 // eslint-disable-next-line default-param-last
@@ -48,11 +49,7 @@ export function serve(assetDir: string, config: RuntimeConfig = {}, opts?: Opts)
     app.get('/index.html', serveIndex);
     app.register(helmet, {
         global: true,
-        strictTransportSecurity: {
-            maxAge: 7776000,
-            includeSubDomains: true, // defaults to true
-        },
-        contentSecurityPolicy: true, // defaults to true
+        ...(opts?.helmet ?? {}),
     });
     app.register(fastifyStatic, {
         ...(opts?.static ?? {}),
