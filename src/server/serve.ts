@@ -46,7 +46,13 @@ export function serve(assetDir: string, config: RuntimeConfig = {}, opts?: Opts)
 
     app.get('/', serveIndex);
     app.get('/index.html', serveIndex);
-    app.register(helmet, { global: true });
+    app.register(helmet, {
+        global: true,
+        strictTransportSecurity: {
+            maxAge: 7776000,
+            includeSubDomains: true,
+        },
+    });
     app.register(fastifyStatic, {
         ...(opts?.static ?? {}),
         root: assetDir,
