@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/versori/spa-server/compare/v1.3.0...v1.4.0) (2024-04-05)
+
+
+### Features
+
+* add helmet options ([497f862](https://github.com/versori/spa-server/commit/497f8623c1b26beccff68879a05f3b58596daa0d))
+
 # [1.3.0](https://github.com/versori/spa-server/compare/v1.2.0...v1.3.0) (2024-04-05)
 
 
