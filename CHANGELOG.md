@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/versori/spa-server/compare/v1.4.0...v1.5.0) (2024-10-23)
+
+
+### Features
+
+* support customising helmet options on additional routes ([840e759](https://github.com/versori/spa-server/commit/840e75966a20ce461c1639802418814d2734a6e1))
+
 # [1.4.0](https://github.com/versori/spa-server/compare/v1.3.0...v1.4.0) (2024-04-05)
 
 
