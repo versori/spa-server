@@ -1,7 +1,7 @@
-/* eslint-disable no-console */
+import helmet, { FastifyHelmetOptions } from '@fastify/helmet';
 import fastifyStatic, { FastifyStaticOptions } from '@fastify/static';
-import helmet from '@fastify/helmet';
 import Fastify, { FastifyReply, FastifyRequest } from 'fastify';
+import type { RouteShorthandOptions } from 'fastify/types/route';
 import { readFileSync } from 'fs';
 import * as path from 'path';
 import { RuntimeConfig } from '../client';
@@ -14,10 +14,10 @@ type Opts = {
     port?: number;
     address?: string;
     static?: Omit<FastifyStaticOptions, 'root'>;
-    helmet?: object | undefined;
+    helmet?: FastifyHelmetOptions;
+    perRouteOptions?: Record<string, RouteShorthandOptions & { helmet?: FastifyHelmetOptions }>;
 };
 
-// eslint-disable-next-line default-param-last
 export function serve(assetDir: string, config: RuntimeConfig = {}, opts?: Opts) {
     const indexHtml = readFileSync(path.resolve(assetDir, 'index.html'), {
         encoding: 'utf8',
@@ -45,8 +45,6 @@ export function serve(assetDir: string, config: RuntimeConfig = {}, opts?: Opts)
         serveIndex(request, reply);
     });
 
-    app.get('/', serveIndex);
-    app.get('/index.html', serveIndex);
     app.register(helmet, {
         global: true,
         ...(opts?.helmet ?? {}),
@@ -57,11 +55,31 @@ export function serve(assetDir: string, config: RuntimeConfig = {}, opts?: Opts)
         preCompressed: true,
     });
 
-    app.listen(opts?.port ?? DEFAULT_PORT, opts?.address ?? DEFAULT_ADDRESS, (err) => {
-        // eslint-disable-next-line no-console
-        if (err) {
-            console.error('failed to start server: ', err);
-            process.exit(1);
-        }
+    const { perRouteOptions = {} } = opts ?? {};
+    const routes = Object.keys(perRouteOptions);
+
+    if (!routes.includes('/')) {
+        app.get('/', serveIndex);
+    }
+
+    if (!routes.includes('/index.html')) {
+        app.get('/index.html', serveIndex);
+    }
+
+    routes.forEach((route) => {
+        app.get(route, { config: perRouteOptions[route] }, serveIndex);
     });
+
+    app.listen(
+        {
+            port: opts?.port ?? DEFAULT_PORT,
+            host: opts?.address ?? DEFAULT_ADDRESS,
+        },
+        (err) => {
+            if (err) {
+                console.error('failed to start server: ', err);
+                process.exit(1);
+            }
+        }
+    );
 }
