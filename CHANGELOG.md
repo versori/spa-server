@@ -1,3 +1,11 @@
+## [1.5.1](https://github.com/versori/spa-server/compare/v1.5.0...v1.5.1) (2026-01-07)
+
+
+### Bug Fixes
+
+* lmao ([f28b9e6](https://github.com/versori/spa-server/commit/f28b9e6331f42c103abdb53bd129159ed4a05b58))
+* update johnnys ([a0d7cba](https://github.com/versori/spa-server/commit/a0d7cbadd585e581cd52dcf2b5b42a735f1f47bf))
+
 # [1.5.0](https://github.com/versori/spa-server/compare/v1.4.0...v1.5.0) (2024-10-23)
 
 
