@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/versori/spa-server/compare/v1.5.1...v1.5.2) (2026-03-25)
+
+
+### Bug Fixes
+
+* bump ajv ([#15](https://github.com/versori/spa-server/issues/15)) ([16913e9](https://github.com/versori/spa-server/commit/16913e945f03630151baa1229dcb1f3c9d1ca57c))
+
 ## [1.5.1](https://github.com/versori/spa-server/compare/v1.5.0...v1.5.1) (2026-01-07)
 
 
