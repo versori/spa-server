@@ -1,6 +1,6 @@
 {
   "name": "@versori/spa-server",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "A HTTP server for SPA applications",
   "files": [
     "client",
