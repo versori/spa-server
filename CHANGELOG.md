@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/versori/spa-server/compare/v1.5.3...v1.5.4) (2026-06-15)
+
+
+### Bug Fixes
+
+* **deps:** update brace-expansion, shell-quote, ws, and yaml to latest versions ([899683c](https://github.com/versori/spa-server/commit/899683cda232772d4d43d6d22e7632736c555ebd))
+
 ## [1.5.3](https://github.com/versori/spa-server/compare/v1.5.2...v1.5.3) (2026-05-11)
 
 
