@@ -1,3 +1,11 @@
+## [1.5.5](https://github.com/versori/spa-server/compare/v1.5.4...v1.5.5) (2026-08-24)
+
+
+### Bug Fixes
+
+* bump @fastify/static and js-yaml to resolve HIGH CVEs due 2026-08-27 ([02e9914](https://github.com/versori/spa-server/commit/02e9914cdff1172a7012a03bf272cc3b2b5bf88a))
+* drop unneeded js-yaml override, plain reinstall already resolves it ([c34c037](https://github.com/versori/spa-server/commit/c34c0374580f9e8419f55d11d4bd16cf37f33f19))
+
 ## [1.5.4](https://github.com/versori/spa-server/compare/v1.5.3...v1.5.4) (2026-06-15)
 
 
