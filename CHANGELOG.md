@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/versori/spa-server/compare/v1.5.5...v1.6.0) (2026-08-25)
+
+
+### Features
+
+* why is not not triggering a release if it is a code change ([b629b34](https://github.com/versori/spa-server/commit/b629b3440637ddc20d7b035a738760ce7ba0df8f))
+
 ## [1.5.5](https://github.com/versori/spa-server/compare/v1.5.4...v1.5.5) (2026-08-24)
 
 
