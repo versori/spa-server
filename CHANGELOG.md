@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/versori/spa-server/compare/v1.6.0...v1.6.1) (2026-10-08)
+
+
+### Bug Fixes
+
+* bump babel core, fast-uri, browserslist, and js-yaml to resolve overdue CVEs ([85ecbcb](https://github.com/versori/spa-server/commit/85ecbcb3dbcc760bde7cc17e175108f5b317081c))
+
 # [1.6.0](https://github.com/versori/spa-server/compare/v1.5.5...v1.6.0) (2026-08-25)
 
 
